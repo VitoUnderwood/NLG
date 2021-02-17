@@ -14,4 +14,11 @@ python3.8.2
 numpy pandas pytorch transformers
 详细版本见requirement.txt
 
-### 
+### 类图
+
+使用plantUML绘制类图，见nlg.puml
+
+### 基本框架
+
+构建Args Dictionary BaseModel Utils基本框架，使用常见的工厂模式便于拓展使用
+
