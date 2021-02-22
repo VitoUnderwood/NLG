@@ -1,9 +1,24 @@
 # -*- coding:utf-8 -*-
 
 import argparse
-from args import Args
+import torch
+import numpy as np
+import random
+
+from model import GPT
+from dictionary import Dictionary
 
 def train(args : argparse.Namespace):
+    device = torch.device("cuda" if torch.cuda.is_available() and int(args.device) >= 0 else "cpu")
+    if args.seed:
+        torch.manual_seed(args.seed)
+        random.seed(args.seed)
+        np.random.seed(args.seed)
+
+    # model = GPT()
+    dic = Dictionary(args)
+    train_data = dic.readFromJson(args.train_file_path)
+    test_data = dic.readFromJson(args.test_file_path)
     pass
 
 def predict(args : argparse.Namespace):

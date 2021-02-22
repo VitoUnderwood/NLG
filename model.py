@@ -5,8 +5,10 @@ class BaseModel(metaclass=ABCMeta):
     """
     some base config for deep model
     """
-    __lr = 0.0
 
     @abstractmethod
     def sigmoid(self, x):
         pass
+
+class GPT(BaseModel):
+    pass
