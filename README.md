@@ -4,7 +4,7 @@
 
 ### 虚拟环境
 创建虚拟环境，隔离版本，稳定开发。
-1. 使用python自带的venv, python -m venv path
+1. 使用python自带的venv, python -m venv nameOfEnv
 2. source venv/bin/activate(deactivate)
 3. pip freeze > requirements.txt (pip install -r requirements.txt)
 如果要是对特定版本对python版本有要求，可以使用anaconda进行python版本控制和包管理
